@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./variables.scss";
-@import "./home.scss";
-@import "./nav.scss";
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -21,16 +17,11 @@
 }
 
 body {
-  color: $textPrimary;
-  background: $bgPrimary;
-}
-
-section {
-  padding: 3rem;
-}
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
