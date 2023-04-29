@@ -1,0 +1,31 @@
+.hero {
+  &__title {
+    font-size: calc(100vw / 6.6);
+    line-height: 1;
+  }
+
+  &__tagline {
+    font-size: 1.25rem;
+  }
+
+  &__img-wrapper {
+    border: 1px solid #5a5a5a;
+    border-radius: 15px;
+
+    .hero__about {
+      border-radius: 15px;
+    }
+  }
+}
+
+.epistle {
+  &__title {
+    font-size: 5rem;
+  }
+}
+
+.investments {
+  &__title {
+    font-size: 5rem;
+  }
+}

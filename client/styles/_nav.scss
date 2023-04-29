@@ -1,0 +1,15 @@
+.nav {
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #5a5a5a;
+  background-color: #f4f7f1;
+  border-radius: 15px;
+  position: relative;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
