@@ -1,118 +1,143 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Btn from "@/components/Btn";
+import InvestModal from "@/components/InvestModal";
+import Nav from "@/components/Nav";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <>
+      <InvestModal />
+      <Nav />
+      <main className={`${inter.className}`}>
+        <section className="hero mt-[65px]">
+          <h1 className="hero__title">ImpactChain</h1>
+
+          <div className="hero__img-wrapper w-full h-[400px] relative">
+            <span className="hero__tagline w-fit p-4 bg-[#1f1f1f] capitalize text-center">
+              Invest, Earn and Donate for Impact.
+            </span>
+            <img
+              className="hero__img w-full h-full rounded-[15px] object-cover "
+              src="/hero_bg.png"
+              alt="hero bg"
             />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div className="hero__about absolute z-1 top-0 right-0 max-w-[400px] p-4 m-4">
+              <h2 className="title font-semibold mb-4">
+                Harvest Your Investment
+              </h2>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+              <p>
+                Get ready to earn green while going green with FarmFund!
+                FarmFund lets you invest in sustainable farming practices,
+                earning a return on your investment. With FarmFund, your money
+                is used to plant crops, producing high-quality, organic food
+                that is distributed to investors and consumers alike. FarmFund
+                is committed to using organic farming methods to protect the
+                environment and promote biodiversity. Join us today and stake
+                your claim in the future of agriculture while growing your
+                wealth sustainably.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="how-it-works flex gap-[50px]">
+          <div className="how-it-works__left">
+            <h2 className="how-it-works__title">How It works</h2>
+            <p className="how-it-works__desc max-w-[400px]">
+              We basically handle the hardwork for you while you sit back,
+              invest and track your earnings
+            </p>
+          </div>
+
+          <ul className="how-it-works__info mt-[100px] bg-[#131313e1] flex flex-col gap-8 p-6 pt-8 pb-8 rounded-[15px]">
+            <li className="how-it-works__item ml-4 pb-2">
+              Choose a venture to invest in
+            </li>
+            <li className="how-it-works__item ml-4 pb-2">
+              What time period it should last for
+            </li>
+            <li className="how-it-works__item ml-4 pb-2">
+              Earn returns after stipulated time
+            </li>
+            <li className="how-it-works__item ml-4 pb-2">
+              Donate to a cause or withdraw
+            </li>
+            <li className="how-it-works__item ml-4 pb-2">
+              Tracks your investment/donations
+            </li>
+          </ul>
+        </section>
+
+        <section className="investments flex flex-col">
+          <h2 className="investments__title">
+            Our Investment
+            <br />
+            Plan
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className="investments__subtitle self-end font-semibold uppercase mb-2">
+            Let's Get You Invested!
           </p>
-        </a>
+          <p className="investments__desc max-w-[300px] self-end text-end mb-4">
+            We do the heavy lifting while your investment works for you because
+            we believe investing should be easy and profitable.
+          </p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="investments__container flex justify-between gap-2">
+            <div className="investment p-4 max-w-[300px] rounded-[15px] bg-[#131313e1] h-fit flex flex-col gap-2">
+              <h3 className="investment__title font-semibold">Seedling</h3>
+              <p className="investment__sub">90 days</p>
+              <p className="investment__desc">
+                Invest for 90 days and earn 2% interest - the perfect short-term
+                plan for quick and steady growth.
+              </p>
+              <button className="invest p-2 text-[#f1f1f1] rounded bg-[#101010] w-fit">
+                Invest
+              </button>
+            </div>
+            <div className="investment p-4 max-w-[300px] rounded-[15px] bg-[#131313e1] h-fit flex flex-col gap-2 mt-8">
+              <h3 className="investment__title font-semibold">Sapling</h3>
+              <p className="investment__sub">180 days</p>
+              <p className="investment__desc">
+                Looking for a long-term investment strategy? Invest for 180 days
+                and earn 5% interest - a smart choice for those seeking
+                stability and substantial returns.
+              </p>
+              <button className="invest p-2 text-[#f1f1f1] rounded bg-[#101010] w-fit">
+                Invest
+              </button>
+            </div>
+            <div className="investment p-4 max-w-[300px] rounded-[15px] bg-[#131313e1] h-fit flex flex-col gap-2 mt-16">
+              <h3 className="investment__title font-semibold">Harvest</h3>
+              <p className="investment__sub">365 days</p>
+              <p className="investment__desc">
+                Ready for a big investment payoff? Invest for 365 days and earn
+                a whopping 12% interest - the ultimate choice for those who want
+                to maximize their returns and reach their financial goals faster
+              </p>
+              <button className="invest p-2 text-[#f1f1f1] rounded bg-[#101010] w-fit">
+                Invest
+              </button>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+          <div className="investments__start">
+            <p className="max-w-[250px] mb-3">
+              Convinced yet? Get started now and make an impact!
+            </p>
+            <Btn text={"Make an Investment"} />
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        <footer className="footer w-full p-12">
+          <p className="footer__text h-[60px] rounded-[15px] bg-[#131313e1] text-center flex items-center justify-center">
+            ©2023 ImpactChain Limited
           </p>
-        </a>
-      </div>
-    </main>
-  )
+        </footer>
+      </main>
+    </>
+  );
 }

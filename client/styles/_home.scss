@@ -1,0 +1,58 @@
+.hero {
+  &__title {
+    font-size: calc(100vw / 7.5);
+    line-height: 1;
+  }
+
+  &__img-wrapper {
+    // border: 1px solid ;
+    border-radius: 15px;
+    position: relative;
+
+    .hero__tagline {
+      border-bottom-right-radius: 15px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    .hero__about {
+      background-color: $bgSecondary;
+      border-radius: 15px;
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.how-it-works {
+  &__info {
+    .how-it-works__item {
+      border-bottom: 1px solid #5a5a5a;
+    }
+  }
+}
+
+.footer {
+  &__text {
+    border: 1px solid #5a5a5a;
+  }
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .invest-modal {
+    border: 1px solid #5a5a5a;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}

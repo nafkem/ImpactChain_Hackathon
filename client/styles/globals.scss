@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./variables.scss";
+@import "./home.scss";
+@import "./nav.scss";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +21,26 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: $textPrimary;
+  background: $bgPrimary;
+  background-attachment: fixed;
+}
+
+section {
+  padding: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: $fontPrimary;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+ul {
+  list-style-type: number;
 }
